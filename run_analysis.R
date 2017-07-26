@@ -68,9 +68,6 @@ data_with_activity_labels <- data_with_activity_labels[,c(3,1,2,4:82)]
 # deleting parentheses where they exist in variable names
 names(data_with_activity_labels) <- gsub("()","",names(data_with_activity_labels),fixed = TRUE)
 
-# writing new data set to .csv file
-write.csv(data_with_activity_labels, file = "new_activity_df.csv" )
-
 # Step 5: creating a new data set which is grouped by activity and subject
 # and contains the mean value for every variable in a sub group
 
@@ -83,6 +80,6 @@ mean_grouped_data <- summarise_at(groupedData,-c(1:4), mean)
 # renaming column names to specify that now they contain means
 names(mean_grouped_data) <- c(names(mean_grouped_data)[1:2], paste("mean", names(mean_grouped_data)[-c(1:2)]))
 # write new grouped data set to .csv
-write.csv(mean_grouped_data, file = "mean_grouped_data.csv" )
+write.table(mean_grouped_data, file = "mean_grouped_data.txt", row.name=FALSE )
 
 
