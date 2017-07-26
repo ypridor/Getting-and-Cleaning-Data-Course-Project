@@ -8,8 +8,8 @@ This data set includes the following files:
 - README.md (this file)
 - CodeBook.md - containing information about the variables and the transformations                 performed on the original data
 - run_analysis.R - containing the full script for performing the analysis
-- new_activity_df.csv - the data table that is a merge between the teat data and                           the trial data, with clear activity labels, only mean and                          std variables and "clean" variable names.
-- mean_grouped_data.csv - the data table of the grouped data (by activity and                                subject), with mean values for all of the variables
+
+- mean_grouped_data.txt - the data table of the grouped data (by activity and                                subject), with mean values for all of the variables
 
 Info regarding original data set:
 =================================
